@@ -2,16 +2,12 @@
 using namespace std;
 
 int main() {
-    char ch;
-    cout << "enter char :";
-    cin >> ch;
+   int count = 1;
 
-    if(ch >='65' && ch <= '90') {
-        cout << "lowercase\n";
-    }
-   else {
-        cout << "uppercase\n";
-    }
-
+   while (count <= 10){
+    cout << count << " ";
+    count++;
+   }
+   cout << endl;
 return 0;
 }
