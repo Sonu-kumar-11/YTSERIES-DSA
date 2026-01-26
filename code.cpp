@@ -2,13 +2,14 @@
 using namespace std;
 
 int main() {
-    int ch;
-    cout<<"enter char :";
+    char ch;
+    cout << "enter char :";
     cin >> ch;
 
-    if(ch <='a' && ch >= 'z') {
+    if(ch >='a' && ch <= 'z') {
         cout << "lowercase\n";
-    } else {
+    }
+   else {
         cout << "uppercase\n";
     }
 
