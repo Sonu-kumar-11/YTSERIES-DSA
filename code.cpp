@@ -1,40 +1,17 @@
 #include <iostream>
 using namespace std;
-
-int main() {
-int n=4;
-
-for(int i=0;i<n;i++){
-   //spaces
- for (int j=0;j<n-i-1;j++){
-    cout << " ";
- }
- cout << "*";
-
- if(i !=0){
-   //spaces
- for(int j=0;j<2*i-1;j++){
-   cout << " ";
- } 
- cout << "*";
- }
-   cout << endl;
+//function definition
+int printhello () {
+  cout << "hello\n";
+  return 3;
 }
+int main (){
+  //finction call/invoke
+  cout << printhello()<< endl;
 
-//bottom
- for (int i=0;i<n-2;i++){
-   for(int j=0; j<i+1;j++){
-      cout << " ";
-   }
-    cout << "*";
-
-    if(i!=n-1){
-      for(int j=0;j<2*(n-i)-5;j++){
-         cout << " ";
-      }
-      cout << "*";
-    }
-cout << endl;
   return 0;
-   }
 }
+
+
+   
+
