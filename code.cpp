@@ -1,17 +1,29 @@
 #include <iostream>
 using namespace std;
-//function definition
-int printhello () {
-  cout << "hello\n";
-  return 3;
+int minOfTwo( int a,int b){ //parameters
+  if(a<b){
+    return a;
+  }else{
+    return b;
+  }
+}
+int factorialN (int n) {
+  int fact = 1;
+
+  for(int i=1;i<=n;i++){
+   fact *=i;
+  }
+  return fact;
 }
 int main (){
-  //finction call/invoke
-  cout << printhello()<< endl;
-
+  cout << factorialN(5) << endl;
+  cout << factorialN(10) << endl;
   return 0;
 }
 
+ 
+
+  
 
    
 
