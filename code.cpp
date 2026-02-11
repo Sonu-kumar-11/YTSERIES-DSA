@@ -1,29 +1,34 @@
 #include <iostream>
 using namespace std;
-int minOfTwo( int a,int b){ //parameters
-  if(a<b){
-    return a;
-  }else{
-    return b;
-  }
-}
-int factorialN (int n) {
-  int fact = 1;
+int decTOBinary(int decNum){
+  int ans=0, pow=1;
 
-  for(int i=1;i<=n;i++){
-   fact *=i;
+  while(decNum > 0){
+    int rem =decNum % 2;
+    decNum /=2;
+    ans += (rem*pow);
+    pow*=10;
   }
-  return fact;
-}
-int main (){
-  cout << factorialN(5) << endl;
-  cout << factorialN(10) << endl;
-  return 0;
+   return ans; //binary form
+   
 }
 
- 
+int binToDecimal(int binNum){
+  int ans = 0, pow=1;
+
+  while(binNum>0){
+    int rem = binNum%10;
+    ans += rem * pow;
+
+    binNum/=10;
+    pow*=2;
+  }
+  return ans; //decimal form
+
+}
+int main(){
+cout << binToDecimal(10110) << endl;
+return 0;
+}
 
   
-
-   
-
