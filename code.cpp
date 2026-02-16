@@ -2,29 +2,20 @@
 using namespace std;
 
 int main(){
-  int side;//side of a square
-  cin >>side;
-  cout<<"area="<<side*side<<endl;
+    int age ;
+    cout<<"enter your age:";
+    cin>>age;
 
-float pencost,pencilcost,erasercost;//total cost
-cin>>pencost;
-cin>>pencilcost;
-cin>>erasercost;
-
-float totalcost=pencost+pencilcost+erasercost;
-
-cout<<"total="<<totalcost<<endl;
-cout<<"totalwith gst="<<(totalcost+(0.18*totalcost))<<endl;
-
-float P,R,T;//prt
-cin>>P;
-cin>>R;
-cin>>T;
-cout<<"SI="<<(P*R*T)/100<<endl;
-
-float rad;//radius
-cin>>rad;
-cout<<"area="<<(22/7*rad*rad)<<endl;
+    if(age>=18){
+        cout<<"can vote"<< endl;
+    }
+    
+    if(age>=45){
+        cout<<"contest for election \n";
+    }
+    else{
+        cout<<"can't vote";
+    }
 
 return 0;
 }
