@@ -2,20 +2,44 @@
 using namespace std;
 
 int main(){
-    int age ;
-    cout<<"enter your age:";
-    cin>>age;
+  int a,b;
+  char op;
 
-    if(age>=18){
-        cout<<"can vote"<< endl;
-    }
+  cout<<"enter a:";
+  cin >>a;
+    cout<<"enter b:";
+  cin >>b;
+    cout<<"enter operator:";
+  cin >>op;
+  //calculator
+  if(op =='+') {
+    cout<<"a+b="<<(a+b)<<endl;
+  }else if(op=='-'){
+    cout<<"a-b="<<(a-b)<<endl;
+  }else if(op=='*'){
+    cout<<"a*b="<<(a*b)<<endl;
+  }else if(op=='-'){
+    cout<<"a-b="<<(a-b)<<endl;
+  }else if(op=='/'){
+    cout<<"a/b="<<(a/b)<<endl;
+  }else{
+    cout<<"invalid operator";
+  }
+  //switch
+  switch(op){
+    case '+':cout<<"a+b="<<(a+b)<<endl;
+    break;
+     case '-':cout<<"a-b="<<(a-b)<<endl;
+    break;
+     case '*':cout<<"a*b="<<(a*b)<<endl;
+    break;
+     case '/':cout<<"a/b="<<(a/b)<<endl;
+    break;
     
-    if(age>=45){
-        cout<<"contest for election \n";
-    }
-    else{
-        cout<<"can't vote";
-    }
+    default : cout<<"invalid operator";
+  }
+
+  
 
 return 0;
 }
