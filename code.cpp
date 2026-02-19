@@ -1,45 +1,22 @@
 #include <iostream>
+#include<cmath>
 using namespace std;
 
 int main(){
-  int a,b;
-  char op;
+int n=17;
+bool isprime =true;
+for(int i=2;i<=sqrt(n);i++){
+    if(n%i==0){//i is a factor of n ; i compeletely didvidesn;n is non prime 
+isprime=false;
+break;
+    }
+}
+if (isprime==true){
+    cout<<"number is prime"<<endl;
+}else{
+    cout<<"number is non prime"<<endl;
+}
 
-  cout<<"enter a:";
-  cin >>a;
-    cout<<"enter b:";
-  cin >>b;
-    cout<<"enter operator:";
-  cin >>op;
-  //calculator
-  if(op =='+') {
-    cout<<"a+b="<<(a+b)<<endl;
-  }else if(op=='-'){
-    cout<<"a-b="<<(a-b)<<endl;
-  }else if(op=='*'){
-    cout<<"a*b="<<(a*b)<<endl;
-  }else if(op=='-'){
-    cout<<"a-b="<<(a-b)<<endl;
-  }else if(op=='/'){
-    cout<<"a/b="<<(a/b)<<endl;
-  }else{
-    cout<<"invalid operator";
-  }
-  //switch
-  switch(op){
-    case '+':cout<<"a+b="<<(a+b)<<endl;
-    break;
-     case '-':cout<<"a-b="<<(a-b)<<endl;
-    break;
-     case '*':cout<<"a*b="<<(a*b)<<endl;
-    break;
-     case '/':cout<<"a/b="<<(a/b)<<endl;
-    break;
-    
-    default : cout<<"invalid operator";
-  }
-
-  
 
 return 0;
 }
