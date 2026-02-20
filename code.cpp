@@ -2,20 +2,15 @@
 #include<cmath>
 using namespace std;
 
+
 int main(){
-int n=17;
-bool isprime =true;
-for(int i=2;i<=sqrt(n);i++){
-    if(n%i==0){//i is a factor of n ; i compeletely didvidesn;n is non prime 
-isprime=false;
-break;
-    }
+int n=6;
+int fact=1;
+for(int i=1;i<n;i++){
+    fact*=i;
 }
-if (isprime==true){
-    cout<<"number is prime"<<endl;
-}else{
-    cout<<"number is non prime"<<endl;
-}
+cout<<"factorial of" <<n<<"="<<fact<<"\n";
+
 
 
 return 0;
