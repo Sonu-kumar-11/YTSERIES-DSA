@@ -4,14 +4,19 @@ using namespace std;
 
 
 int main(){
-int n=6;
-int fact=1;
-for(int i=1;i<n;i++){
-    fact*=i;
+int n =372;
+int num=n;
+int cubesum=0;
+
+while(num>0){
+    int lastdig=num%10;
+    cubesum+= lastdig*lastdig*lastdig;
+    num/=10;
 }
-cout<<"factorial of" <<n<<"="<<fact<<"\n";
-
-
-
+if(n==cubesum){
+    cout<<"armstrong number\n";
+}else{
+    cout<<"not an armstrong number\n";
+}
 return 0;
 }
