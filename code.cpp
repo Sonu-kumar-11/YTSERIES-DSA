@@ -4,19 +4,16 @@ using namespace std;
 
 
 int main(){
-int n =372;
-int num=n;
-int cubesum=0;
+int n = 10;
+int first=0,sec=1;
+cout<<first<<" "<<sec<<" "; 
+for(int i=2;i<n;i++){
+    int third=first+sec;
+    cout<<third<<" ";
+    first=sec;
+    sec=third;
+}
+cout<<"\n";
 
-while(num>0){
-    int lastdig=num%10;
-    cubesum+= lastdig*lastdig*lastdig;
-    num/=10;
-}
-if(n==cubesum){
-    cout<<"armstrong number\n";
-}else{
-    cout<<"not an armstrong number\n";
-}
 return 0;
 }
