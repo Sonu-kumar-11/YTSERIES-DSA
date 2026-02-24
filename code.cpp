@@ -1,29 +1,29 @@
+
 #include <iostream>
-#include<cmath>
 using namespace std;
 
 
-int main(){
-    //palindromic pattern with number
-int n=5;
-//spaces
-for(int i=1;i<=n;i++){
-for(int j=1;j<=n-i;j++){
-    cout<<" ";
-}//nums backward
-for(int j=i;j>=1;j--) {
-    cout<<j;
-}
-
-// nums forward
-for(int j=2;j<=i;j++){
-    cout<<j;
-}
-cout<<endl;
-}
-
-return 0;
-
+    int factorial(int n){
+        int fact =1;
+        for(int i=1;i<=n;i++){
+            fact=fact*i;
+        }
+        cout<<"factorial("<< n <<")="<< fact<<endl;
+return fact;
     }
+
+
+    int main() {
+factorial(1);
+factorial(1);
+factorial(2);
+factorial(3);
+factorial(4);
+factorial(5);
+factorial(6);
+return 0;
+    }
+
+    
 
   
