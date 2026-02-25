@@ -1,17 +1,14 @@
 
 #include <iostream>
 using namespace std;
-int num=25;
-void sum(int a,int b){
-   cout << num <<endl;
-   int s=a+b;
-    cout<<s << endl;
-}
 int main(){
-    sum(5,4);
-    int s=10;
-    cout<< s;
-    return 0;
+int a=32;
+int *ptr=&a;
+char ch='A';
+char & cho=ch;
+*ptr=ch;
+cout<< cho << ch <<endl;
+
 }
 
     
