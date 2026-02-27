@@ -1,26 +1,30 @@
 
 #include <iostream>
-using namespace std;
+using namespace std ;
 
-int sum(int a, int b)
-{
-    cout << (a + b) << endl;
-    return (a + b);
+bool isprime(int n) {
+    if (n==1){
+        return false;
+    }
+    for (int i=2;i*i<=n;i++){
+if(n%i==0){
+    return false;
+}
+    }
+    return true;
 }
 
-double sum(double a, double b){
-
-    cout << (a + b) << endl;
-    return a + b;
+void allprimes (int n){
+    // all primes -> form 2 to n
+    for ( int i=2; i<=n;i++){
+        if ( isprime(i)){ // true
+            cout<< i<< " ";
+        }
+    }
+    cout << endl;
 }
-int sum(int a,int b ,int c){
-    cout << (a+b+c)<< endl;
-    return a + b + c;
-} 
 int main(){
-    sum(2, 3);
-    sum(12, 13);
-    sum(1.5, 2.5);
-    sum(1, 2,3);
-    return 0;
+    allprimes(150);
+
+return 0;
 }
