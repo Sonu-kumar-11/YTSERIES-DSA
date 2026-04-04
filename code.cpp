@@ -2,15 +2,23 @@
 #include <iostream>
 using namespace std;
 
- int main(){
-   
-    int x=5,y=10;
-    int *ptr1 = &x, *ptr2= &y;
-    ptr2 = ptr1;
+void printsubarrays(int *arr,int n){
+    for(int start=0;start<n;start++){
+for(int end=start;end<n;end++){
+   // cout<<"("<< start<<","<<end<<")";
+   for(int i=start;i<=end;i++){
+    cout<<arr[i];
+   }
+   cout<<", ";
+}
+cout<< endl;
+    }
+}
 
-    cout<< ptr2 << "\n";
-    cout<<ptr1<<"\n";
-    cout<<&x <<"\n";
-   
+ int main(){
+   int arr[5]={1,2,3,4,5};
+    int n=5;
+
+   printsubarrays(arr,n);
 return 0;
 }
