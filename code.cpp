@@ -3,12 +3,14 @@
 using namespace std;
 
  int main(){
-    int a =10; 
-    int *ptr = &a; 
-     cout<<ptr<<"\n";//1st
-    cout<<*ptr<<"\n";
    
-    *ptr=20;
-    cout <<a<<"\n";
+    int x=5,y=10;
+    int *ptr1 = &x, *ptr2= &y;
+    ptr2 = ptr1;
+
+    cout<< ptr2 << "\n";
+    cout<<ptr1<<"\n";
+    cout<<&x <<"\n";
+   
 return 0;
 }
