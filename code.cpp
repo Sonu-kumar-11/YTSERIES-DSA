@@ -4,36 +4,29 @@
 #include<algorithm>
 using namespace std;
 
-void maxsubarraysum2(int *arr,int n){
-int maxsum = INT_MIN ;
+void maxprofit(int *prices ,int n){
+    int bestBuy[100000];
+    bestBuy[0]=INT_MAX;
 
-    for(int start=0;start<n;start++){//start=2
-        int currsum=0;
-for(int end=start;end<n;end++){// end 2,3,4,
-   currsum += arr[end];
-    maxsum= max(maxsum,currsum);
-    
+    for(int i=1;i<n;i++){
+        bestBuy[i]=min(bestBuy[i-1],prices[i-1]);
+       
     }
-    cout<< endl;
-}
-cout << "maximum subarray sum="<<maxsum<< endl;
-}
-void maxsubarraysum3(int *arr,int n){
-int maxsum = INT_MIN ;
-int currsum=0;
-for(int i=0;i<n;i++){
-    currsum += arr[i];
-    maxsum=max(currsum,maxsum);
-    if(currsum<0){
-        currsum=0;
+    int maxprofit =0;
+    for (int i=0;i<n;i++){
+        int currprofit = prices[i] - bestBuy[i];
+        maxprofit = max(maxprofit ,currprofit);
     }
-   }
-      cout << "maximum subarray sum ="<< maxsum << endl;
+    //o(n+n)=o(2n)=o(n)
+    cout<<"max profit ="<< maxprofit << endl;
 }
+
+
 int main() {
-    int arr[4]={-2,-3,-6,-5,};
-    int n=sizeof(arr) / sizeof(int);
+    int prices[6]={7,1,5,3,6,4};
+    int n=sizeof(prices) / sizeof(int);
    
-maxsubarraysum3(arr,n);
+    maxprofit(prices,n);
+
 return 0;
 }
