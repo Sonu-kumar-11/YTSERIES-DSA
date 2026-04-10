@@ -1,36 +1,36 @@
 #include<iostream>
 using namespace std;
-#include<climits>
-#include<algorithm>
-int diagonalsum (int mat[][3], int n){
-    int sum=0;
-    for(int i=0;i<n;i++){// rows
-        for(int j=0; j<n; j++){//columns
-            if(i==j){
-             sum +=mat[i][j];
-            }else if(j==n-i-1){
-                sum +=mat[i][j];
 
+bool search (int mat[][4], int n, int m ,int key){
+    int i=0, j=m-1;
+   //o(n+m) time complexity
+    while(i<n && j>=0) {
+        if(mat[i][j] == key){
+            cout << "found at cell ("<< i << "," << j << ")\n";
+            return true;
+        }else if(mat[i][j]> key){
+// left
+     j--;
+        }else{
+            //down
+            i++;
+        }
+
+    }
+    cout << "key not found\n";
+    return false;
+
+   
             }
 
-        }
+          
         
-    }
-    cout<<"sum="<< sum << endl;
-    return sum;
-}
-
 int main(){
-    int mat[4][4]={{1,2,3,4},
-                      {5,6,7,8},
-                       { 9,10,11,12},
-                        {13,14,15,16}};
+    int matrix[4][4]={{1,2,3,4},
+                      {15,25,35,45},
+                       { 27,29,37,48},
+                        {32,33,39,50}};
                                
-  int mat2[3][3]={{1,2,3,},
-                      {5,6,7,},
-                       { 9,10,11,}
-                        };
-diagonalsum(mat2,3);
-
+ search(matrix, 4, 4, 50);
  return 0;
 }
