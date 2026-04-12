@@ -2,22 +2,26 @@
 #include<cstring>
 using namespace std;
 
-void toupper(char word[], int n){
-    for(int i=0; i<n; i++){
-    char ch = word[i];
-    if(ch>='A' && ch<='Z'){ // uppercase
-        continue ;
-    }else { // lower case
-        word[i] = ch -'a' + 'A';
+void ispalindrome(char str[],int n){
+    int st= 0, end = n-1;
+    while(st < end){
+        if(str[st++] !=str[end--]) {
+          cout << "not valid palindrome\n";
+        
+
+        }
+        
     }
-}
+    cout << "valid palindrome \n";
 
 }
+
 
 int main(){
-    char word[]="ApPle";
-    toupper(word,strlen(word));
-    cout << word << endl;
+    char word[]="madam";
+    ispalindrome(word,strlen(word));
+  
+   
   return 0;
 }
 
